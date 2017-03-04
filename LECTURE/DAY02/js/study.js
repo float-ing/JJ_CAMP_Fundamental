@@ -23,7 +23,11 @@ console.log(favorite_item); // 'Macbook Pro'
 // 문서에서 속성이 lang 이며, 속성 값이 "en"인 요소를 찾는다.
 // DOM = 문서객체모델(Document Object Model)
 // DOM Script = DOM API + JavaScript
-document.querySelector('p[lang="en"]').innerText = favorite_item;
+// 변수를 사용하는 이유!
+// 문서에서 (힘들게 비용을 들여서) 찾은 객체는 다시 사용할 수 있게 메모리에 기억해둔다.
+var target_p = document.querySelector('p[lang="en"]');
+// 변수에 참조된 문서 객체에 설정(조작)한다.
+// target_p.innerText = favorite_item;
 
 // jQuery Library <= JavaScript + DOM
 // $('p[lang="en]').text(favorite_item);
@@ -65,10 +69,38 @@ y = ( x / x * 10 ) % 3;
 console.log('y =', y);
 
 // 문자와 관련된 연산
-// 문자 + 문자 ?????
+// 문자 + 문자 => 문자 접합(붙이다)
 var word1 = "paper",
     word2 = "strategy";
 
 console.log('word1:', word1);
 console.log('word2:', word2);
 console.log('word1 + word2:', word1 + word2);
+
+// --------------------------------------------
+// 숫자 + 문자 연결했을 때
+// 숫자가 문자화 된 후에 문자와 접합된다.
+var current_year, year_word;
+current_year = 2017; // 숫자
+year_word    = '년'; // 문자
+
+// 숫자 + 문자 => 숫자(문자화) + 문자 => 문자 접합
+var current = current_year + year_word;
+console.log('current:', current);
+
+// 변수에 기억된 문서 객체에 접근하여 조작한다.
+// target_p.innerText = current; // '2017년' 문자 데이터 값이 설정
+
+// 'Macbook Pro, 2017년 모델'
+// favorite_item + '. ' + current + ' 모델'
+// target_p.innerText = favorite_item + '. ' + current + ' 모델';
+
+// 문서에서 이벤트 제어를 처리할 버튼을 찾자.
+var answer_btn = document.querySelector('.answer-favorite-item');
+console.log('answer_btn:', answer_btn);
+
+// 사용자가 버튼을 클릭하면
+answer_btn.onclick = function() {
+  // 수행할 일(function): 목표로 하는 단락 요소의 텍스트 값을 화면에 표시합니다.
+  target_p.innerText = favorite_item + '. ' + current + ' 모델';
+};
