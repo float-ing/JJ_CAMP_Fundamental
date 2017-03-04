@@ -44,6 +44,8 @@ console.log(day_to_hour);
 
 // --------------------------------------------
 // 연산자(Operator)
+// --------------------------------------------
+
 // 수와 관련된 연산(산술 연산)
 // +, -, *, /, %
 
@@ -61,3 +63,12 @@ x = 10;
 y = ( x / x * 10 ) % 3;
 
 console.log('y =', y);
+
+// 문자와 관련된 연산
+// 문자 + 문자 ?????
+var word1 = "paper",
+    word2 = "strategy";
+
+console.log('word1:', word1);
+console.log('word2:', word2);
+console.log('word1 + word2:', word1 + word2);
