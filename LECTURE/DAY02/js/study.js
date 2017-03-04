@@ -7,6 +7,9 @@
  *  - "항상 일관된 수": 값(Value)
  */
 
+// --------------------------------------------
+// 변수(Variable)
+
 // 변수 정의
 // undefined 데이터(자료) 값
 var favorite_item;
@@ -18,4 +21,43 @@ favorite_item = 'Macbook Pro'; // 값(리터럴: Literal)
 console.log(favorite_item); // 'Macbook Pro'
 
 // 문서에서 속성이 lang 이며, 속성 값이 "en"인 요소를 찾는다.
+// DOM = 문서객체모델(Document Object Model)
+// DOM Script = DOM API + JavaScript
 document.querySelector('p[lang="en"]').innerText = favorite_item;
+
+// jQuery Library <= JavaScript + DOM
+// $('p[lang="en]').text(favorite_item);
+
+// --------------------------------------------
+// 상수(Constant)
+
+// const 키워드를 사용하여 상수를 정의
+// 선언과 동시에 값을 할당할 수도 있다.
+const PI = 3.141592;
+// const PI = '파이';
+const day_to_hour = 24;
+
+// 상수의 이름 작성 규칙은 대부분 변수와 유사
+// 하지만 모든 이름의 철자를 대문자로 써주는 것이 관례
+console.log(PI);
+console.log(day_to_hour);
+
+// --------------------------------------------
+// 연산자(Operator)
+// 수와 관련된 연산(산술 연산)
+// +, -, *, /, %
+
+// var x;
+// var y;
+
+// var 키워드를 한 번만 사용하는 방법
+// single var pattern
+var x, y;
+
+// 선언된 변수에 값을 할당
+// assign value
+x = 10;
+// 연산 수행 후, 결과 값을 변수 y에 할당
+y = ( x / x * 10 ) % 3;
+
+console.log('y =', y);

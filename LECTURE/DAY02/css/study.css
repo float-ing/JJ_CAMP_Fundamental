@@ -7,5 +7,10 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   font-weight: 300;
-  font-size: 1.8rem;
+  color: #3fb5c8;
+}
+
+.message-box {
+  padding: 1em;
+  background: #eee;
 }
