@@ -206,12 +206,14 @@ console.log('n2:', n2);
 var arr_o, arr_k;
 
 arr_o = [ 1, 1, 2, 3, 5, 8, 13 ];
-arr_k = arr_o; // 복사가 아닌, 참조
+arr_k = arr_o; // 복사가 아닌, "참조" 과정이 이루어진다.
 
 console.log('[before] arr_o:', arr_o);
 console.log('[before] arr_k:', arr_k);
 
-// 변형
+// arr_k를 통해 참조된 배열 객체에 변형을 가하게 되면
 arr_k.push(21);
+
+// 동일한 배열 객체를 참조하고 있는 arr_o 역시 변형된 값을 출력한다.
 console.log('[after] arr_o:', arr_o);
 console.log('[after] arr_k:', arr_k);
