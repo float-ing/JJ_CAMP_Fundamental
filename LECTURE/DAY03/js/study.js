@@ -132,5 +132,51 @@ var fn = function(){
 
 // 변수에 참조된 함수 실행
 // 함수 이름 뒤에 () 괄호는 실행 연산자
-fn();
+// fn();
+
+
+// --------------------------------------------
+// 함수를 생성하는 3가지 방법
+// --------------------------------------------
+// 1. 함수 선언문: "자주 사용된다."
+function functionDeclaration(){
+  console.log('this is functionDeclaration()');
+  console.log('this is functionDeclaration()');
+  console.log('this is functionDeclaration()');
+  console.log('this is functionDeclaration()');
+  console.log('this is functionDeclaration()');
+}
+// 2. 함수 표현식: "자주 사용된다."
+var functionExpression = function(){
+  console.log('this is functionExpression()');
+  console.log('this is functionExpression()');
+  console.log('this is functionExpression()');
+  console.log('this is functionExpression()');
+  console.log('this is functionExpression()');
+};
+// 3. 함수 생성 (new 사용): 거의 사용되지 않는다.
+var createFunction = new Function('console.log("this is createFunction()");console.log("this is createFunction()");console.log("this is createFunction()");console.log("this is createFunction()");console.log("this is createFunction()");console.log("this is createFunction()");');
+
+// --------------------------------------------
+// 집합(List, Array)
+// 하나 이상의 값을 가지고 있는 덩어리(모음)
+
+// 변수는 하나의 값만 기억할 수 있기 때문에
+// 값 하나 하나를 기억하기 위해 변수를 선언(정의)하는 것은
+// 매우 비효율적(낭비)이며, 관리하기가 쉽지 않다.
+var favorite_item_1 = 'coffee';
+var favorite_item_2 = 'macbook';
+var favorite_item_3 = 'remote controller';
+var favorite_item_4 = 'house';
+var favorite_item_5 = 'car';
+
+// 집합을 관리하기 위한 변수(복수) 선언
+// 하나 이상의 값들의 모음을 기억하기 위해 배열 데이터 유형을 사용한다.
+var favorite_items = [
+  'coffee',
+  'macbook',
+  'remote controller',
+  'house',
+  'car'
+];
 
