@@ -123,3 +123,14 @@ function lookAtMe() {}
 ////////////
 // 이름이 없는 함수 값(함수 리터럴)을 변수에 대입
 var callMe = function(){};
+
+
+// 함수 표현식을 사용하여 변수에 함수 값을 할당
+var fn = function(){
+  console.log('this is function object. only called object.')
+};
+
+// 변수에 참조된 함수 실행
+// 함수 이름 뒤에 () 괄호는 실행 연산자
+fn();
+
