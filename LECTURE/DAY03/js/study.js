@@ -11,6 +11,10 @@
  *  - 함수(Function) 객체
  *  - 배열(Array) 객체
  *
+ *  객체가 아닌 것들
+ *  속성을 가지지 않는다.
+ *  [ERROR] cannot set property of undefined
+ *  [ERROR] cannot get property of null
  *  undefined
  *  null
  */
@@ -23,7 +27,6 @@
 // var num, str, boo, fun, arr, obj;
 
 // 단일 var 패턴 <- 값 할당: single `var` pattern <= assign value
-
 // var num=1, str='phone', boo=true, fun=function(){}, arr, obj;
 
 // 사람이 읽기 좋도록(readable) 정렬
@@ -198,6 +201,7 @@ n1 = 9e2; // n1 값은 변경되었다. (기존에 복사된 값은 소멸)
 console.log('n1:', n1);
 console.log('n2:', n2);
 
+console.log('%c------------------------------------------------------------', 'color: #3d9a21');
 
 /////////////////////////////
 // 값 참조(Pass by Reference)
@@ -219,3 +223,20 @@ arr_k.push(21);
 console.log('[after] arr_o:', arr_o);
 console.log('[after] arr_k:', arr_k);
 
+console.log('%c------------------------------------------------------------', 'color: #3d9a21');
+
+// --------------------------------------------
+// 배열 데이터를 참조하는 변수 선언과 동시에
+// 배열의 원소를 배열 데이터에 추가할 수 있다.
+var data_list = [3, 'hey', false, function(){}, [3], {a: 9}];
+
+// 배열이 포함하는 원소(item)에 접근하는 방법은
+// 배열 데이터 이름 뒤에 각괄호([])를 넣고, 배열 생성 시,
+// 설정된 인덱스(index) 숫자를 넣어주면 값을 빼올 수 있다.
+// 해당 인덱스에 기록된 데이터 값을 반환한다.
+console.log('data_list[0]:', data_list[0]); // 3
+console.log('data_list[1]:', data_list[1]); // 'hey'
+console.log('data_list[2]:', data_list[2]); // false
+console.log('data_list[3]:', data_list[3]); // function(){}
+console.log('data_list[4]:', data_list[4]); // [3]
+console.log('data_list[5]:', data_list[5]); // {a: 9}
