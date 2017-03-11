@@ -10,9 +10,11 @@ console.log('memo:', memo);
 
 // 메모 요소는 화면에 보여지고 있는가? (상태 변수: 초기 값: true)
 var memo_is_visible = true; // 보여지고 있다.
+var toggle_btn_content = 'Hide'; // hide <-> show
 
 // 문서에서 찾은 .toggle-button 버튼을 사용자가 클릭하면
-console.log('toggle_btn.onclick:', toggle_btn.onclick); // null
+// console.log('toggle_btn.onclick:', toggle_btn.onclick); // null
+
 toggle_btn.onclick = function(){
 
   // .memo 요소는 화면에서 보여지거나, 감춰진다.
@@ -23,15 +25,21 @@ toggle_btn.onclick = function(){
   // }
 
   // a == b : 비교 연산자
-  if ( memo_is_visible == true ) {
+  // if ( memo_is_visible == true ) {
+  if ( memo_is_visible ) {
     memo.style.opacity = 0;
+    // 상태 변경
+    toggle_btn_content = 'Show';
+    toggle_btn.innerText = toggle_btn_content;
   } else {
     memo.style.opacity = 1;
+    toggle_btn.innerText = 'Hide';
+    toggle_btn_content = 'Hide';
   }
 
   // 코드 실행 이후에 상태가 변견되어야 한다.
-
   memo_is_visible = !memo_is_visible;
   // console.log('memo_is_visible:', memo_is_visible);
+
 };
 
