@@ -180,3 +180,38 @@ var favorite_items = [
   'car'
 ];
 
+
+// 값 복사  VS  값 참조
+
+/////////////////////////
+// 값 복사(Pass by Value)
+/////////////////////////
+
+// 복사가 이루어지는 데이터 유형 5가지: 숫자,문자,논리,null,undefined
+var n1 = 9;
+var n2 = n1; // n1에 복사된 숫자 9 값을 n2에 복사한다.
+console.log('n1:', n1);
+console.log('n2:', n2);
+
+n1 = 9e2; // n1 값은 변경되었다. (기존에 복사된 값은 소멸)
+console.log('n1:', n1);
+console.log('n2:', n2);
+
+
+/////////////////////////////
+// 값 참조(Pass by Reference)
+/////////////////////////////
+
+// 참조가 이루어지는 데이터 유형: 참조형 객체(함수,배열,객체)
+var arr_o, arr_k;
+
+arr_o = [ 1, 1, 2, 3, 5, 8, 13 ];
+arr_k = arr_o; // 복사가 아닌, 참조
+
+console.log('[before] arr_o:', arr_o);
+console.log('[before] arr_k:', arr_k);
+
+// 변형
+arr_k.push(21);
+console.log('[after] arr_o:', arr_o);
+console.log('[after] arr_k:', arr_k);
