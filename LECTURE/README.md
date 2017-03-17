@@ -27,7 +27,7 @@
 
 ![](https://d1ro8r1rbfn3jf.cloudfront.net/ms_124679/oxndGtrJob3Fcynd9gAFisLmkVIZSk/4%252F1%2B%25EC%2598%25A4%25ED%259B%2584%2B3-7%25EC%258B%259C%2B%25EC%2588%2598%25EC%2597%2585%25EC%2597%2590%2B%25EB%258C%2580%25ED%2595%259C%2B%25EC%259D%2598%25EA%25B2%25AC%2B-%2BGoogle%2B%25EC%2584%25A4%25EB%25AC%25B8%25EC%25A7%2580%2B2017-03-18%2B08-29-00.jpg?Expires=1489879761&Signature=ABAW2w2X45SGbDjW6e-fnu6SIPAOok95VnI-HtgqJZeti6OO3yowXbMIt0gRRg3zmMe9GQPFOvFqRQRSZ0~zjNL0kN6BSOwEEn-rii~9ra-E2HihqeFi82JJvvnpNgl7r1Dmh35RqHzp4CpkL0JkgWAR1270sTurBWAWR1lFMLM-nGDgk43lcf~-UMqvWPMvmmYBnyEInMPswVCWMcx45u5UKJnEKbYiUfXj~E5Ks96zIoayooVgu7-4cfxvBZBqeSeNno5wO9BFal9A2pwvzDDqX9VxQAVqXJoaRmz5Pl3DtpffYxSIOPSx2KhmxcwmJC2e9hvxSsDIVycCmEmzZA__&Key-Pair-Id=APKAJHEJJBIZWFB73RSA)
 
----
+<!-- ---
 
 ### JJ CAMP 첫걸음, 2기 멤버
 
@@ -55,7 +55,7 @@
 17 | 이혜진 | 웹 퍼블리셔 | SBS 콘텐츠 허브 | penguin90@sbs.co.kr | [github.com/penguin90](https://github.com/penguin90)
 18 | 유진희 | 프리랜서 |  | yashicafx3@naver.com | [github.com/ujinhee](https://github.com/ujinhee)
 19 | 김형진 | 개발 | 씨와이디정보기술 | hjshuma@gmail.com | [github.com/hjshuma](https://github.com/hjshuma)
-20 | 고청요 |  |  | all.new.chch@gmail.com | [github.com/float-ing](https://github.com/float-ing)
+20 | 고청요 |  |  | all.new.chch@gmail.com | [github.com/float-ing](https://github.com/float-ing) -->
 
 <!-- ### 사전 설문(Pre Survey) 결과
 
