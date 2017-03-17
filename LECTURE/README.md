@@ -56,8 +56,7 @@
 18 | 유진희 | 프리랜서 |  | yashicafx3@naver.com | [github.com/ujinhee](https://github.com/ujinhee)
 19 | 김형진 | 개발 | 씨와이디정보기술 | hjshuma@gmail.com | [github.com/hjshuma](https://github.com/hjshuma)
 20 | 고청요 |  |  | all.new.chch@gmail.com | [github.com/float-ing](https://github.com/float-ing)
--
 
-### 사전 설문(Pre Survey) 결과
+<!-- ### 사전 설문(Pre Survey) 결과
 
-![](../ASSETS/pre-survey-20170225.jpg)
+![](../ASSETS/pre-survey-20170225.jpg) -->
