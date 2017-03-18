@@ -4,7 +4,7 @@
  *  JavaScript 데이터 유형(Data Types, 자료형)
  *  ES5(2009) - ES6(2015)
  *
- *  객체(Object)
+ *  - 객체(Object)
  *  - 숫자(Number) 객체
  *  - 문자(String) 객체
  *  - 논리(Boolean) 객체
@@ -126,7 +126,6 @@ function lookAtMe() {}
 // 이름이 없는 함수 값(함수 리터럴)을 변수에 대입
 var callMe = function(){};
 
-
 // 함수 표현식을 사용하여 변수에 함수 값을 할당
 var fn = function(){
   console.log('this is function object. only called object.')
@@ -160,8 +159,12 @@ var functionExpression = function(){
 var createFunction = new Function('console.log("this is createFunction()");console.log("this is createFunction()");console.log("this is createFunction()");console.log("this is createFunction()");console.log("this is createFunction()");console.log("this is createFunction()");');
 
 // --------------------------------------------
-// 집합(List, Array)
+// 배열(Array)
 // 하나 이상의 값을 가지고 있는 덩어리(모음)
+// '값'의 집합. 값을 묶었다.
+//
+// 객체(Object)
+// '속성:값'의 집합.
 // --------------------------------------------
 
 // 변수는 하나의 값만 기억할 수 있기 때문에
