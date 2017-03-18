@@ -115,16 +115,16 @@ shara = {
 jain = {
   // key: value 쌍으로 구성된 데이터 = 객체
   // 명사 형태의 속성은 모두 properties
-  name           : 'Jain',
-  age            : 32,
-  major          : 'Ancient History',
-  grade          : 'graduated',
-  favorite_items : ['bag', 'drink coffee', 'travel'],
-  graduated      : true,
+  'name'           : 'Jain',
+  'age'            : 32,
+  'major'          : 'Ancient History',
+  'grade'          : 'graduated',
+  'favorite_items' : ['bag', 'drink coffee', 'travel'],
+  'graduated'      : true,
   // 동사(실행, 함수 데이터 참조) 형태의 속성은 특별하게 메서드(method)라고 부른다.
-  driving        : function() {},
-  running        : function() {},
-  reading        : function() {}
+  'driving'        : function() {},
+  'running'        : function() {},
+  'reading'        : function() {}
 };
 
 climbing_club = [
@@ -135,3 +135,33 @@ climbing_club = [
 ];
 
 // console.log(climbing_club);
+
+
+///////////////////////
+// 객체 속성에 접근하는 방법
+///////////////////////
+
+// 1. 객체.속성, 점 표기법
+// console.log( jaremy.major );
+// console.log( jain.age );
+
+// 2. 객체['속성'], 각괄호 표기법
+// console.log( jaremy['major'] );
+// console.log( jain['age'] );
+
+// CSS Map
+// 각괄호 표기법을 사용해야만 아래 속성에 접근이 가능하다.
+var container_cssmap = {
+  'max-width'    : '1080px',
+  'min-height'   : '100vh',
+  'margin-left'  : 'auto',
+  'margin-right' : 'auto'
+};
+
+// 객체의 속성을 지울 경우는 delete 키워드를 사용한다.
+
+console.log('jain.driving - 지우기 전:', jain.driving);
+
+delete jain.driving;
+
+console.log('jain.driving - 지운 후:', jain.driving);
