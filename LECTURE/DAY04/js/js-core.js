@@ -21,35 +21,35 @@ employees.push('정대만');
 employees.push('서태웅');
 
 // 배열 데이터 employees를 콘솔에서 확인
-console.log('employees:', employees);
+// console.log('employees:', employees);
 
 // 배열 데이터 employees의 총 원소 개수
-console.log('employees.length:', employees.length); // 4
+// console.log('employees.length:', employees.length); // 4
 
 // 배열 데이터 employees에 새로운 원소(item) 추가
 employees.push('설민석');
 
 // 자동 업데이트 된 배열 데이터 employees의 총 원소 개수
-console.log('employees.length:', employees.length); // 5
+// console.log('employees.length:', employees.length); // 5
 
 // 배열 데이터 employees의 각 원소(item)을 출력
 // [0]
-console.log('employees[0]:', employees[0]);
+// console.log('employees[0]:', employees[0]);
 // [1]
-console.log('employees[1]:', employees[1]);
+// console.log('employees[1]:', employees[1]);
 // [2]
-console.log('employees[2]:', employees[2]);
+// console.log('employees[2]:', employees[2]);
 // [3]
-console.log('employees[3]:', employees[3]);
+// console.log('employees[3]:', employees[3]);
 // 자동으로 업데이트 되는 employees.length - 2 는 항상 배열의 마지막에서 2번째 원소를 가리키게 된다.
-console.log('employees[employees.length - 2]:', employees[employees.length - 2]);
+// console.log('employees[employees.length - 2]:', employees[employees.length - 2]);
 // [4]
-console.log('employees[4]:', employees[4]);
+// console.log('employees[4]:', employees[4]);
 // 자동으로 업데이트 되는 employees.length - 1 은 항상 배열의 마지막(1번째) 원소를 가리키게 된다.
-console.log('employees[employees.length - 1]:', employees[employees.length - 1]);
+// console.log('employees[employees.length - 1]:', employees[employees.length - 1]);
 // [5] 숫자 상수 값을 변수로 변경하면 employees.length 와 같다.
-console.log('employees[5]:', employees[5]); // undefined
-console.log('employees[employees.length]:', employees[employees.length]);
+// console.log('employees[5]:', employees[5]); // undefined
+// console.log('employees[employees.length]:', employees[employees.length]);
 
 // Create JavaScript Array Type
 // 주의할 점!
@@ -70,3 +70,68 @@ console.log('employees[employees.length]:', employees[employees.length]);
 // JavaScript 메모리 관리는 가비지 컬렉터(쓰레기 수집)가 한다.
 // 가비지 컬렉터에 의해 메모리에서 삭제되지 않으려면 변수에 참조(기억)시켜야 한다.
 var student = {}; // 학생을 의미하는 새로운 객체 생성 (변수에 메모리)
+
+// 객체의 속성이라는 것은...
+// 변수인데 객체가 포함하면 그것은 객체의 속성이 된다.
+
+// 변수
+// var name = '';
+
+// 객체.속성
+student.name       = '고우리';
+student.age        = 21;
+student.university = '한강대학교';
+
+// console.log('student:', student);
+
+// 배열, 객체를 사용하여 클래스(학급)를 추상화
+// 사용 가능한 데이터 화
+
+// 학급 = [학생, 학생, 학생, 학생]
+// 학생 = {이름:'', 나이:'', 전공:'', '학년':''}
+
+// 이름(name)
+// 나이(age)
+// 전공(major)
+// 학년(grade)
+
+var jaremy, shara, jain, climbing_club;
+
+jaremy           = {};
+jaremy.name      = 'Jaremy';
+jaremy.age       = 18;
+jaremy.major     = 'Math';
+jaremy.grade     = 'high school 3';
+jaremy.graduated = false;
+
+shara = {
+  name      : 'Shara',
+  age       : 24,
+  major     : 'Cooking',
+  grade     : 'University 4',
+  graduated : false
+};
+
+jain = {
+  // key: value 쌍으로 구성된 데이터 = 객체
+  // 명사 형태의 속성은 모두 properties
+  name           : 'Jain',
+  age            : 32,
+  major          : 'Ancient History',
+  grade          : 'graduated',
+  favorite_items : ['bag', 'drink coffee', 'travel'],
+  graduated      : true,
+  // 동사(실행, 함수 데이터 참조) 형태의 속성은 특별하게 메서드(method)라고 부른다.
+  driving        : function() {},
+  running        : function() {},
+  reading        : function() {}
+};
+
+climbing_club = [
+  // value 로만 구성된 집합 = 배열
+  jain,
+  jaremy,
+  shara
+];
+
+// console.log(climbing_club);
