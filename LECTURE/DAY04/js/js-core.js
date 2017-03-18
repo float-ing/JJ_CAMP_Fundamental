@@ -268,6 +268,32 @@ function checkDataType(data) {
   return Object.prototype.toString.call(data).toLowerCase().slice(8,-1);
 }
 
+// [Helper] wrapper functions
+function isNumber(data) {
+  return checkDataType(data) === 'number';
+}
+function isString(data) {
+  return checkDataType(data) === 'string';
+}
+function isBoolean(data) {
+  return checkDataType(data) === 'boolean';
+}
+function isFunction(data) {
+  return checkDataType(data) === 'function';
+}
+function isArray(data) {
+  return checkDataType(data) === 'array';
+}
+function isObject(data) {
+  return checkDataType(data) === 'object';
+}
+function isNull(data) {
+  return checkDataType(data) === 'null';
+}
+function isUndefined(data) {
+  return checkDataType(data) === 'undefined';
+}
+
 // 함수 사용 방법
 // 결과 값을 반환하는 함수, 반환하지 않는 함수
 checkDataType(900);       // 'number'
