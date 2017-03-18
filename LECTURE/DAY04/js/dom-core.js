@@ -11,4 +11,16 @@
 // var targetListItems;   // camelCase
 var target_list_items; // underscore
 target_list_items = document.querySelectorAll('.target-list li');
-console.log(target_list_items);
+// console.log(target_list_items);
+
+// target_list_items 변수에 참조된 유사배열 데이터 노드리스트(NodeList)의 원소 총 개수
+console.log('target_list_items.length:', target_list_items.length);
+
+// target_list_items 변수에 참조된 데이터의 개별 원소에 접근하는 방법
+// 표준 API 방법
+target_list_items.item(1);
+// 유사 배열이기에 사용할 수 있는 방법
+target_list_items[1];
+// 변수 target_list_items에 참조된 데이터(유사 배열)의 마지막 원소에 접근하는 방법
+var last_item = target_list_items[ target_list_items.length - 1 ];
+console.log('last_item:', last_item);

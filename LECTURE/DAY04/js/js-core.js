@@ -51,14 +51,22 @@ console.log('employees[employees.length - 1]:', employees[employees.length - 1])
 console.log('employees[5]:', employees[5]); // undefined
 console.log('employees[employees.length]:', employees[employees.length]);
 
-
-
-
-
-
+// Create JavaScript Array Type
+// 주의할 점!
+// new Array() 방식은 사용하지 않는 것이 좋다.
+// [] 배열 리터럴 방식을 사용하는 것을 권장한다.
 
 
 ////////////
 // Object //
 ////////////
 
+// 권장하지 않는 객체 생성 방법
+// new Object();
+
+// 권장하는 객체 생성 방법
+// {}
+
+// JavaScript 메모리 관리는 가비지 컬렉터(쓰레기 수집)가 한다.
+// 가비지 컬렉터에 의해 메모리에서 삭제되지 않으려면 변수에 참조(기억)시켜야 한다.
+var student = {}; // 학생을 의미하는 새로운 객체 생성 (변수에 메모리)
