@@ -165,3 +165,114 @@ console.log('jain.driving - 지우기 전:', jain.driving);
 delete jain.driving;
 
 console.log('jain.driving - 지운 후:', jain.driving);
+
+
+// JSON 이란?
+// 클라이언트 <-> 서버, 데이터를 주고 받을 때 사용하는 포멧
+// 객체와 배열로 구성된 데이터이다. (서버에 전송할 때는 문자화해야 한다)
+// Server 전송 받는 데이터 JSON, XML
+// https://api.myjson.com/bins/otssr
+
+
+// typeof 는 키워드이며, 함수가 아니다.
+// 괄호 ()를 사용하는 이유는 다음과 같다.
+
+var y, x;
+
+x = 10;
+
+y = x * x - 7; // 93
+
+typeof x        // "number"
+typeof y        // "number"
+typeof x + ''   // "number"
+typeof (x + '') // "string" <----
+
+
+
+
+// typeof 의 치명적 설계 오류!!
+// typeof 사용 시, 데이터 값 반환은 문자열로(소문자로만)
+
+typeof 9               // "number"
+typeof ''              // "string"
+typeof true            // "boolean"
+typeof undefined       // "undefined"
+typeof function fn(){} // "function"
+typeof {}              // "object"
+typeof [1, 2, 3, 4]    // "object"    <---
+typeof null            // "object"    <---
+
+// 붕어빵 틀: 원형 객체(Symbol)
+// 붕어빵:   인스턴스(조각, 실체화, 구현화)
+
+
+// 실체 구현된 객체 (생성자로부터 만들어진 존재하는 객체이다)
+// [1, 2, 3, 4]
+
+// 생성과정
+// Array는 생성자 (객체를 생성할 수 있는 존재)   e.g) 붕어빵 틀
+// numbers 변수에 참조된 객체는 실제 구현된 객체  e.g) 붕어빵
+var numbers = new Array();
+numbers.push(1);
+numbers.push(2);
+numbers.push(3);
+numbers.push(4);
+
+// typeof
+typeof numbers;           // 'object' [X]
+numbers instanceof Array; // true [O]
+
+
+
+// 사실 아래 결과는 올바른 것이지만,
+// 일반적인 인식에서는 오류처럼 보일 수 있다.
+// 이 점에 instanceof를 사용할 때 주의할 점이다.
+1098 instanceof Number;             // false
+new Number(1098) instanceof Number; // true
+
+// 생성자(constructor)
+// 자바스크립트 모든 객체는 반드시 이 속성을 가진다.
+// 객체.constructor
+// 이 속성은 객체의 생성자를 반환한다.
+
+// 자바스크립트 데이터 유형 변수에 할당
+var num = 102,         // 숫자 값으로 실제 객체는 아니지만... 자바스크립트가 객체처럼 처리한다.
+    str = 'hi, there', // 문자 값으로 ⬆︎ 상동 ..
+    boo = false,       // 논리 값으로 ⬆︎ 상동 ..
+    fun = function() {},
+    arr = [],
+    obj = {};
+
+console.log('num.constructor:', num.constructor === Number);   // Number
+console.log('str.constructor:', str.constructor === String);   // String
+console.log('boo.constructor:', boo.constructor === Boolean);  // Boolean
+console.log('fun.constructor:', fun.constructor === Function); // Function
+console.log('arr.constructor:', arr.constructor === Array);    // Array
+console.log('obj.constructor:', obj.constructor === Object);   // Object
+
+// constructor 속성은 모든 객체에 정확한 생성자를 반환하여 알려줌으로 문제가 없다.
+// 단, 이것은 어디까지나 객체에 국한된다.
+
+
+// JavaScript에서 제공하는 데이터 유형을 감지하는 3가지 방법은 모두 완벽하지 않다.
+// 이 문제로 JavaScript 코드로 구성된 프로그래밍은 오류를 발생할 확률을 가진다.
+// 프로그래머라면 사전에 문제가 발생하지 않도록 설정하는 것이 기본 자질이다.
+
+
+// JavaScript 모든 데이터를 100% 완벽하게 검증할 수 있는 함수를 만들자!
+// 헬퍼 함수(사용자 정의 함수), 유틸리티 함수
+
+// 함수 선언문
+function checkDataType(data) {
+  return Object.prototype.toString.call(data).toLowerCase().slice(8,-1);
+}
+
+// 함수 사용 방법
+// 결과 값을 반환하는 함수, 반환하지 않는 함수
+checkDataType(900);       // 'number'
+checkDataType(null);      // 'null'
+checkDataType([1, 4, 8]); // 'array'
+
+// 함수 표현식
+var detactDataType = function() {};
