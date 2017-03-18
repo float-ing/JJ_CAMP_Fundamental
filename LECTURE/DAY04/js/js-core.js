@@ -33,18 +33,21 @@ employees.push('설민석');
 console.log('employees.length:', employees.length); // 5
 
 // 배열 데이터 employees의 각 원소(item)을 출력
-// 0
+// [0]
 console.log('employees[0]:', employees[0]);
-// 1
+// [1]
 console.log('employees[1]:', employees[1]);
-// 2
+// [2]
 console.log('employees[2]:', employees[2]);
-// 3
+// [3]
 console.log('employees[3]:', employees[3]);
-// 4
+// 자동으로 업데이트 되는 employees.length - 2 는 항상 배열의 마지막에서 2번째 원소를 가리키게 된다.
+console.log('employees[employees.length - 2]:', employees[employees.length - 2]);
+// [4]
 console.log('employees[4]:', employees[4]);
+// 자동으로 업데이트 되는 employees.length - 1 은 항상 배열의 마지막(1번째) 원소를 가리키게 된다.
 console.log('employees[employees.length - 1]:', employees[employees.length - 1]);
-// 5 === employees.length
+// [5] 숫자 상수 값을 변수로 변경하면 employees.length 와 같다.
 console.log('employees[5]:', employees[5]); // undefined
 console.log('employees[employees.length]:', employees[employees.length]);
 
