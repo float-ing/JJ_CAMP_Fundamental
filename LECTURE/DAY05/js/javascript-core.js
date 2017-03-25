@@ -66,7 +66,7 @@ function fn2() {}       // 선언문
 // 값의 집합
 var data = []; // new Array() [x]
 // 배열 데이터 추가
-data[0] = 2019;        // 권장되지 않는 방법
+data[0] = 2019;        // [index] 권장되지 않는 방법
 data.push(2901);       // 배열 객체의 메서드(능력)
 data.length;           // 배열 객체가 소유한 원소의 총 개수
 data[data.length - 1]; // 배열 마지막 원소에 접근하는 방법
@@ -88,9 +88,9 @@ var sunmin = {
 // </body> 바로 위에서 호출하는 것이 보다 좋다.
 
 // JavaScript 문서 객체 참조 방법
-var body = window.document.body; // Legacy DOM (lv0)
-var body = window.document.getElementsByTagName('body')[0]; // DOM 1
-var body = window.document.querySelector('body'); // DOM 4
+var body = window.document.body;                            // Legacy DOM (lv0)
+var body = window.document.getElementsByTagName('body')[0]; // DOM lv1
+var body = window.document.querySelector('body');           // DOM lv4
 
 // JavaScript 이벤트 리스너와 이벤트 핸들러
 // 사용자가 이벤트를 발생시키면 (입력하면, 클릭하면, 마우스를 올리면)
@@ -113,8 +113,9 @@ var body = window.document.querySelector('body'); // DOM 4
 
 //////////////
 // 조건 처리 구문
-// 조건에 따라 문장을 달리 처리해주는 것을 말한다.
 //////////////
+
+// 조건에 따라 문장을 달리 처리해주는 것을 말한다.
 
 // 표현식 vs 구문(문장)
 // 표현식
@@ -225,7 +226,6 @@ function toggleCardButton(event) {
     icon.classList.remove('fa-angle-down');
     icon.classList.add('fa-angle-up');
   }
-  // console.log(++count);
 };
 function saveCard(event) {
   event.preventDefault();
@@ -248,9 +248,9 @@ function deleteCard(event) {
 var condition = 'hard';
 
 console.groupCollapsed('조건이 3개 이상인 경우의 if 구문 실습');
-if ( condition === 'hard' )        { console.log('hard'); }
-else if ( condition === 'memory' ) { console.log('memory'); }
-else if ( condition === 'glass' )  { console.log('glass'); }
+if ( condition === 'hard' )        { console.log('hard');                }
+else if ( condition === 'memory' ) { console.log('memory');              }
+else if ( condition === 'glass' )  { console.log('glass');               }
 else                               { console.log('else hard or memory'); }
 console.groupEnd('조건이 3개 이상인 경우의 if 구문 실습');
 
@@ -363,17 +363,3 @@ switch(today) {
   break;
 }
 console.groupEnd('switch 구문 실습');
-
-
-
-
-
-
-
-
-
-
-//////////////
-// 순환 처리 구문
-//////////////
-

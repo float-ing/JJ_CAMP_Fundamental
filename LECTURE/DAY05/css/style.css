@@ -20,13 +20,32 @@ li {
   margin-bottom: 0.3em;
 }
 
+.container {
+  min-width: 450px;
+  max-width: 620px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .show-hide-button {
   margin-bottom: 20px;
 }
 
+.content h1,
+.content h2,
+.content h3,
+.content h4,
+.content h5,
+.content h6 {
+  font-weight: 200;
+}
 
 /* card 상태 클래스 */
 /* SMACSS, BEM, OOCSS */
+
+.card {
+  margin-bottom: 20px;
+}
 
 .card-header-title {
   font-weight: 300;
@@ -41,13 +60,3 @@ li {
 .is-transparent {
   opacity: 0;
 }
-
-.content h1,
-.content h2,
-.content h3,
-.content h4,
-.content h5,
-.content h6 {
-  font-weight: 200;
-}
-
