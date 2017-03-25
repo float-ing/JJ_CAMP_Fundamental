@@ -162,7 +162,20 @@ function detectVisibleAndProcess() {
   }
 }
 
+// CSS는 스타일 언어이기에 JavaScript 처럼 조건 처리가 안된다.
+// 하지만 JavaScript를 사용하면 CSS로도 조건 처리가 가능하다.
 
+// e.g) 자바스크립트 지원되는 환경 vs 미지원 환경
+// 조건을 확인한 후에 <html> 요소에 class 속성 값에 식별 가능한
+// 값을 설정하여 CSS로 핸들링한다.
+
+// TODO
+// 문서에서 <html> 요소를 찾아온다.
+var html = document.documentElement;
+// 해당 요소의 class 속성 값을 변경한다.
+html.setAttribute('class', 'js');
+
+// 조건이 3개 이상인 경우의 if 구문
 
 
 
