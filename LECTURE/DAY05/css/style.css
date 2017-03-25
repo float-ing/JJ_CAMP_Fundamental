@@ -1,0 +1,16 @@
+body {
+  margin: 3rem 3.5rem;
+  font-weight: 200;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: inherit;
+}
+
+ul {
+  padding-left: 1em;
+}
+
+li {
+  margin-bottom: 0.3em;
+}
