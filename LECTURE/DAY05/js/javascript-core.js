@@ -128,6 +128,46 @@ if ( count === 10 ) {
    console.log("count isn't ten.");
 }
 
+// TODO
+// 문서에서 객체 대상을 참조
+var button, list;
+// 버튼
+button = document.querySelector('.show-hide-button');
+// 리스트
+list = document.querySelector('.show-hide-list');
+
+console.groupCollapsed('button, list 문서객체 찾기');
+console.log('button:', button);
+console.log('list:', list);
+console.groupEnd('button, list 문서객체 찾기');
+
+// 해당 객체에 이벤트 리스너(속성)를 설정
+button.onclick = detectVisibleAndProcess;
+
+// 리스너가 감지한 이벤트를 처리할 핸들러(함수) 작성
+function detectVisibleAndProcess() {
+  // [조건]            : list 요소에 style 속성 값이 존재하는가?
+  var condition = list.hasAttribute('style');
+  // [조건이 참일 경우]   : 존재한다면_
+  if ( condition ) {
+    // list 문서 객체 요소는 style 속성을 가지고 있기에 이를 제거한다.
+    list.removeAttribute('style');
+  }
+  // [조건이 거짓일 경우] : 존재하지 않는다면_
+  else {
+    // list 문서 객체 요소의 style 속성을 설정 한다.
+    list.setAttribute('style', 'display: none');
+  }
+}
+
+
+
+
+
+
+
+
+
 
 
 // switch 구문
