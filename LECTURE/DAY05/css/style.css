@@ -24,8 +24,16 @@ li {
   margin-bottom: 20px;
 }
 
-.container {
-  width: 700px;
-  margin-left: auto;
-  margin-right: auto;
+
+/* card 상태 클래스 */
+/* SMACSS, BEM, OOCSS */
+.is-hidden {
+  display: none;
 }
+.is-visible {
+  display: block;
+}
+.is-transparent {
+  opacity: 0;
+}
+

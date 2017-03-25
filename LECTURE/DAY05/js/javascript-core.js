@@ -175,6 +175,42 @@ var html = document.documentElement;
 // 해당 요소의 class 속성 값을 변경한다.
 html.setAttribute('class', 'js');
 
+// TODO
+// Card Folding Example
+// 문서 Card 객체 참조
+var card = document.querySelector('.card');
+var card_toggle_button = card.querySelector('.card-header-icon');
+var card_delete_button = card.querySelector('.card-delete-button');
+var card_content = document.querySelector('.card-content');
+console.groupCollapsed('Card Component Elements');
+console.log('card:', card);
+console.log('card_toggle_button:', card_toggle_button);
+console.log('card_delete_button:', card_delete_button);
+console.log('card_content:', card_content);
+console.groupEnd('Card Component Elements');
+// Card 객체의 특정 엘리먼트 버튼(toggle, delete) 액션
+// var count = 0;
+card_toggle_button.onclick = function(event) {
+  // 브라우저가 처리하는 기본 동작 차단
+  // 기본 동작을 막다 "prevent browser's default action."
+  event.preventDefault();
+  // 상태 클래스(Modifier): is-hidden 클래스 토글(toggle)
+  // console.log('this:', this); // this === button element
+  var is_hidden = card_content.classList.contains('is-hidden');
+  if ( is_hidden ) {
+    // 감춰진 상태
+    card_content.classList.remove('is-hidden');
+  } else {
+    // 보여지는 상태
+    card_content.classList.add('is-hidden');
+  }
+  // console.log(++count);
+};
+
+// 이벤트 리스너에 핸들러를 연결(Bind)
+// 핸들러(함수) 정의
+
+
 // 조건이 3개 이상인 경우의 if 구문
 
 
