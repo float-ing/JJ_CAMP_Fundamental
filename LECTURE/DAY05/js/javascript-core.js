@@ -152,11 +152,13 @@ function detectVisibleAndProcess() {
   if ( condition ) {
     // list 문서 객체 요소는 style 속성을 가지고 있기에 이를 제거한다.
     list.removeAttribute('style');
+    button.textContent = '목록 감추기';
   }
   // [조건이 거짓일 경우] : 존재하지 않는다면_
   else {
     // list 문서 객체 요소의 style 속성을 설정 한다.
     list.setAttribute('style', 'display: none');
+    button.textContent = '목록 보이기';
   }
 }
 
