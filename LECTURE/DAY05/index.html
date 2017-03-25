@@ -32,29 +32,29 @@
 
     <!-- Card Component -->
 
-    <div class="card">
+    <div class="card" role="group">
       <header class="card-header">
-        <p class="card-header-title">
-          Component
-        </p>
-        <a class="card-header-icon">
+        <h4 class="card-header-title">
+          People Card
+        </h4>
+        <a href role="button" class="card-header-icon" title="Card Hide" aria-label="Card Hide">
           <span class="icon">
-            <i class="fa fa-angle-down"></i>
+            <i class="fa fa-angle-down" aria-hidden="true"></i>
           </span>
         </a>
       </header>
       <div class="card-content">
-        <div class="content">
+        <p class="content">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec iaculis mauris.
-          <a>@bulmaio</a>. <a>#css</a> <a>#responsive</a>
+          <a class="card-tag">@bulmaio</a>. <a class="card-tag">#css</a> <a class="card-tag">#responsive</a>
           <br>
-          <small>11:09 PM - 1 Jan 2016</small>
-        </div>
+          <time>11:09 PM - 1 Jan 2016</time>
+        </p>
       </div>
       <footer class="card-footer">
-        <a class="card-footer-item">Save</a>
-        <a class="card-footer-item">Edit</a>
-        <a class="card-footer-item">Delete</a>
+        <a href role="button" class="card-footer-item">Save</a>
+        <a href role="button" class="card-footer-item">Edit</a>
+        <a href role="button" class="card-footer-item">Delete</a>
       </footer>
     </div>
 
