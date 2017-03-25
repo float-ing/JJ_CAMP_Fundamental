@@ -110,7 +110,32 @@ window.document.onkeyup = function(e) {
 
 //////////////
 // 조건 처리 구문
+// 조건에 따라 문장을 달리 처리해주는 것을 말한다.
 //////////////
+
+// 표현식 vs 구문(문장)
+// 표현식
+// var result = 9 * 10 / 3;
+
+// if 구문
+// "만약 (조건)이 참(true)이라면 ~~ 하라."
+// "그렇지 않다면(조건이 거짓(false)이라면) ~~~ 하라."
+var count = 0;
+
+if ( count === 10 ) {
+   console.log("count is ten.");
+} else {
+   console.log("count isn't ten.");
+}
+
+
+
+// switch 구문
+// 3항 연산식(표현식)
+
+
+
+
 
 
 
