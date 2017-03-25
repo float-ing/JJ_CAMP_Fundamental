@@ -96,12 +96,12 @@ var body = window.document.querySelector('body'); // DOM 4
 // 사용자가 이벤트를 발생시키면 (입력하면, 클릭하면, 마우스를 올리면)
 // 이벤트를 감지하여 함수(핸들러)를 실행한다.
 // 사용자가 엔터(Enter) 키를 누르면 사용자에게 알려주겠다.
-window.document.onkeyup = function(e) {
-  var key = e.keyCode || e.which;
-  if ( key === 13 ) {
-    window.alert('엔터 키를 누르셨습니다.');
-  }
-}
+// window.document.onkeyup = function(e) {
+//   var key = e.keyCode || e.which;
+//   if ( key === 13 ) {
+//     window.alert('엔터 키를 누르셨습니다.');
+//   }
+// }
 
 // 사용자가 숫자만 입력할 수 있도록 처리하는 스크립트
 // https://jsfiddle.net/x9ct74c6/2/
@@ -178,10 +178,10 @@ html.setAttribute('class', 'js');
 // TODO
 // Card Folding Example
 // 문서 Card 객체 참조
-var card = document.querySelector('.card');
+var card               = document.querySelector('.card');
 var card_toggle_button = card.querySelector('.card-header-icon');
 var card_delete_button = card.querySelector('.card-delete-button');
-var card_content = document.querySelector('.card-content');
+var card_content       = document.querySelector('.card-content');
 console.groupCollapsed('Card Component Elements');
 console.log('card:', card);
 console.log('card_toggle_button:', card_toggle_button);
@@ -197,15 +197,25 @@ card_toggle_button.onclick = function(event) {
   // 상태 클래스(Modifier): is-hidden 클래스 토글(toggle)
   // console.log('this:', this); // this === button element
   var is_hidden = card_content.classList.contains('is-hidden');
-  if ( is_hidden ) {
-    // 감춰진 상태
+  var icon      = this.querySelector('.fa'); // class 속성 값을 교체
+  if ( is_hidden ) { // 감춰진 상태
     card_content.classList.remove('is-hidden');
-  } else {
-    // 보여지는 상태
+    // this === <a> 요소의 title, aria-label 값을 변경
+    this.setAttribute('title', 'Card Hide');
+    this.setAttribute('aria-label', 'Card Hide');
+    icon.classList.remove('fa-angle-up');
+    icon.classList.add('fa-angle-down');
+  } else { // 보여지는 상태
     card_content.classList.add('is-hidden');
+    this.setAttribute('title', 'Card Show');
+    this.setAttribute('aria-label', 'Card Show');
+    icon.classList.remove('fa-angle-down');
+    icon.classList.add('fa-angle-up');
   }
   // console.log(++count);
 };
+
+
 
 // 이벤트 리스너에 핸들러를 연결(Bind)
 // 핸들러(함수) 정의
