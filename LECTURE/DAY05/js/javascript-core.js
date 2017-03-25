@@ -180,17 +180,25 @@ html.setAttribute('class', 'js');
 // 문서 Card 객체 참조
 var card               = document.querySelector('.card');
 var card_toggle_button = card.querySelector('.card-header-icon');
+var card_save_button   = card.querySelector('.card-save-button');
+var card_edit_button   = card.querySelector('.card-edit-button');
 var card_delete_button = card.querySelector('.card-delete-button');
-var card_content       = document.querySelector('.card-content');
+var card_content       = card.querySelector('.card-content');
 console.groupCollapsed('Card Component Elements');
 console.log('card:', card);
 console.log('card_toggle_button:', card_toggle_button);
 console.log('card_delete_button:', card_delete_button);
 console.log('card_content:', card_content);
 console.groupEnd('Card Component Elements');
-// Card 객체의 특정 엘리먼트 버튼(toggle, delete) 액션
-// var count = 0;
-card_toggle_button.onclick = function(event) {
+
+// 이벤트 리스너에 핸들러를 연결(Binding Event Handler)
+card_toggle_button.onclick = toggleCardButton;
+card_save_button.onclick   = saveCard;
+card_edit_button.onclick   = editCard;
+card_delete_button.onclick = deleteCard;
+
+// 핸들러(함수) 정의
+function toggleCardButton(event) {
   // 브라우저가 처리하는 기본 동작 차단
   // 기본 동작을 막다 "prevent browser's default action."
   event.preventDefault();
@@ -214,15 +222,38 @@ card_toggle_button.onclick = function(event) {
   }
   // console.log(++count);
 };
-
-
-
-// 이벤트 리스너에 핸들러를 연결(Bind)
-// 핸들러(함수) 정의
+function saveCard(event) {
+  event.preventDefault();
+  card_content.setAttribute('contenteditable', false);
+}
+function editCard(event) {
+  event.preventDefault();
+  card_content.setAttribute('contenteditable', true);
+  card_content.focus();
+}
+function deleteCard(event) {
+  event.preventDefault();
+  // 카드.부모.removeChild(카드);
+  // 나의 부모.removeChild(나);
+  card.parentNode.removeChild(card);
+};
 
 
 // 조건이 3개 이상인 경우의 if 구문
+var condition = 'hard';
 
+if ( condition === 'hard' ) {
+   console.log('hard');
+}
+else if ( condition === 'memory' ) {
+   console.log('memory');
+}
+else if ( condition === 'glass' ) {
+   console.log('glass');
+}
+else {
+   console.log('else hard or memory');
+}
 
 
 
