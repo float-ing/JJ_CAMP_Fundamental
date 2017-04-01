@@ -106,6 +106,9 @@ var body = window.document.querySelector('body'); // DOM 4
 // 사용자가 숫자만 입력할 수 있도록 처리하는 스크립트
 // https://jsfiddle.net/x9ct74c6/2/
 
+// 키코드 값을 화면에 출력해주는 사이트
+// http://keycode.info/
+
 
 
 //////////////
@@ -122,11 +125,13 @@ var body = window.document.querySelector('body'); // DOM 4
 // "그렇지 않다면(조건이 거짓(false)이라면) ~~~ 하라."
 var count = 0;
 
+console.groupCollapsed('간단한 if 구문 연습');
 if ( count === 10 ) {
    console.log("count is ten.");
 } else {
    console.log("count isn't ten.");
 }
+console.groupEnd('간단한 if 구문 연습');
 
 // TODO
 // 문서에서 객체 대상을 참조
@@ -180,17 +185,25 @@ html.setAttribute('class', 'js');
 // 문서 Card 객체 참조
 var card               = document.querySelector('.card');
 var card_toggle_button = card.querySelector('.card-header-icon');
+var card_save_button   = card.querySelector('.card-save-button');
+var card_edit_button   = card.querySelector('.card-edit-button');
 var card_delete_button = card.querySelector('.card-delete-button');
-var card_content       = document.querySelector('.card-content');
-console.groupCollapsed('Card Component Elements');
+var card_content       = card.querySelector('.card-content');
+console.groupCollapsed('Card 컴포넌트 문서 객체 참조');
 console.log('card:', card);
 console.log('card_toggle_button:', card_toggle_button);
 console.log('card_delete_button:', card_delete_button);
 console.log('card_content:', card_content);
-console.groupEnd('Card Component Elements');
-// Card 객체의 특정 엘리먼트 버튼(toggle, delete) 액션
-// var count = 0;
-card_toggle_button.onclick = function(event) {
+console.groupEnd('Card 컴포넌트 문서 객체 참조');
+
+// 이벤트 리스너에 핸들러를 연결(Binding Event Handler)
+card_toggle_button.onclick = toggleCardButton;
+card_save_button.onclick   = saveCard;
+card_edit_button.onclick   = editCard;
+card_delete_button.onclick = deleteCard;
+
+// 핸들러(함수) 정의
+function toggleCardButton(event) {
   // 브라우저가 처리하는 기본 동작 차단
   // 기본 동작을 막다 "prevent browser's default action."
   event.preventDefault();
@@ -214,26 +227,142 @@ card_toggle_button.onclick = function(event) {
   }
   // console.log(++count);
 };
-
-
-
-// 이벤트 리스너에 핸들러를 연결(Bind)
-// 핸들러(함수) 정의
+function saveCard(event) {
+  event.preventDefault();
+  card_content.setAttribute('contenteditable', false);
+}
+function editCard(event) {
+  event.preventDefault();
+  card_content.setAttribute('contenteditable', true);
+  card_content.focus();
+}
+function deleteCard(event) {
+  event.preventDefault();
+  // 카드.부모.removeChild(카드);
+  // 나의 부모.removeChild(나);
+  card.parentNode.removeChild(card);
+};
 
 
 // 조건이 3개 이상인 경우의 if 구문
+var condition = 'hard';
+
+console.groupCollapsed('조건이 3개 이상인 경우의 if 구문 실습');
+if ( condition === 'hard' )        { console.log('hard'); }
+else if ( condition === 'memory' ) { console.log('memory'); }
+else if ( condition === 'glass' )  { console.log('glass'); }
+else                               { console.log('else hard or memory'); }
+console.groupEnd('조건이 3개 이상인 경우의 if 구문 실습');
+
+
+// 논리곱(&&), 논리합(||) 연산자 활용
+var num = 46;
+
+console.groupCollapsed('논리곱, 논리합 연산자 활용 구문 실습');
+console.log('num:', num);
+// 만약 num 변수 값이 5보다 크고, 10보다 작다면?
+if ( num > 5 && num < 10 ) {
+  console.log('num 변수 값이 5보다 크고, 10보다 작다.');
+}
+// 만약 num 변수 값이 15보다 작거나, 45보다 크거나 같으면?
+if ( num < 15 || num >= 45 ) {
+  console.log('num 변수 값이 15보다 작거나 혹은 45보다 크거나 같다.');
+}
+console.groupEnd('논리곱, 논리합 연산자 활용 구문 실습');
 
 
 
+// if 구문을 사용한 조건 처리 예시
+var sentence_use_jQuery = null;
 
+if ( window.jQuery ) {
+   sentence_use_jQuery = true;
+} else {
+   sentence_use_jQuery = false;
+}
 
+/////////////////
+// 3항 연산식(표현식)
+/////////////////
 
+// 3항 연산자 표현식을 활용한 조건 처리
+// var use_jQuery = 조건 ? 참인경우 실행 구문 : 거짓인 경우 실행 구문;
+var use_jQuery = window.jQuery ? true : false;
+
+// 다중 3항 연산자 표현식을 사용하여 조건 처리
+// 아래 코드는 사람이 읽기 쉽도록 하기 위해 여러 줄로 작성한 것일 뿐,
+// 표현식이기에 한 줄로 작성이 가능하다.
+var recieved_data = window.recieve ?
+                      'recieve' :
+                      window.document ?
+                        'document' :
+                        window.mouseControl ?
+                          'mouseControl' :
+                          null;
+
+console.groupCollapsed('다중 3항 연산자 표현식 실습');
+console.log('recieved_data:', recieved_data);
+console.groupEnd('다중 3항 연산자 표현식 실습');
 
 
 
 // switch 구문
-// 3항 연산식(표현식)
+// case를 감지해서 처리를 switch 해주는 구문
+// switch, case, break, default
 
+// switch(조건비교대상) {
+//   // case1
+//   case 값1:
+//     값1인 경우의 코드 실행
+//     값1인 경우의 코드 실행
+//     값1인 경우의 코드 실행
+//     값1인 경우의 코드 실행
+//   // case2
+//   case 값2:
+//     값2인 경우의 코드 실행
+//     값2인 경우의 코드 실행
+//     값2인 경우의 코드 실행
+//   // case3
+//   case 값3:
+//     값3인 경우의 코드 실행
+//     값3인 경우의 코드 실행
+// }
+
+var today = '나의요일';
+
+console.groupCollapsed('switch 구문 실습');
+console.log('today:', today);
+console.log('%c------------------------------', 'color: #3d9a21');
+
+switch(today) {
+  // default 키워드 구문의 위치는 어디든 상관 없다.
+  // 대신 앞에 나올 경우, 뒤 구문이 실행되지 않도록 break 해줘야 한다.
+  default:
+    console.info('입력하신 요일은 존재하지 않습니다.');
+  break;
+  case '월요일':
+    console.log('today is 월요일.');
+  break;
+  case '화요일':
+    console.log('today is 화요일.');
+  break;
+  case '수요일':
+    console.log('today is 수요일.');
+  break;
+  case '목요일':
+    console.log('today is 목요일.');
+  break;
+  case '금요일':
+    console.log('today is 금요일.');
+  break;
+  case '토요일':
+    console.log('today is 토요일.');
+  break;
+  case '일요일':
+    console.log('today is 일요일.');
+  break;
+}
+console.groupEnd('switch 구문 실습');
 
 
 

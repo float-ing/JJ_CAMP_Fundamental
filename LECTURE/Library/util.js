@@ -34,3 +34,9 @@ function isNull(data) {
 function isUndefined(data) {
   return checkDataType(data) === 'undefined';
 }
+
+function id(name) {
+  // 오류 검증 (Valid Validation, Detect Invalid)
+  if ( !isString(name) ) { throw new Error('전달인자는 문자열만 허용됩니다.'); }
+  return document.querySelector('#' + name);
+}
