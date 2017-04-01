@@ -10,11 +10,11 @@
 > 1. __[03.04](./LOG/0304.md)__ | 변수와 상수, 연산자. 그리고 JavaScript 자료 구조
 > 1. __[03.11](./LOG/0311.md)__ | JavaScript 자료형, 함수와 배열 객체 데이터
 > 1. __[03.18](./LOG/0318.md)__ | JavaScript 자료형 체크, 문제와 해결책
-> 1. __[03.25](./LOG/0325.md)__ | 지금까지 배운 내용 다시 한 번 훓어보기 및 ...
+> 1. __[03.25](./LOG/0325.md)__ | 지금까지 배운 내용 다시 한 번 훓어보기 및 조건 처리 구문
 
 ---
 
-## 수강생 분들께 부탁드립니다.
+<!-- ## 수강생 분들께 부탁드립니다.
 
 개인적인 사정으로 4월 1일 수업은 오후 3시부터 오후 7시까지 진행하는 방향에 대해 의견을 듣고자 합니다.
 진행못한 1시간 분량의 수업은 추후 보충을 하고자 하는데요. 괜찮으실지 의견 부탁드립니다. 감사합니다.
@@ -26,7 +26,7 @@
 - 응답해주신 모든 분들께서 4/1 오후 3시 수업 시작을 용인해주셨습니다. 감사합니다.
 - 2일(4/8, 4/15)에 걸쳐 30분씩 보강하는 방향으로, 저녁 7시 30분까지로 결정하겠습니다. (기타 의견 반영)
 
-![](https://d1ro8r1rbfn3jf.cloudfront.net/ms_124679/oxndGtrJob3Fcynd9gAFisLmkVIZSk/4%252F1%2B%25EC%2598%25A4%25ED%259B%2584%2B3-7%25EC%258B%259C%2B%25EC%2588%2598%25EC%2597%2585%25EC%2597%2590%2B%25EB%258C%2580%25ED%2595%259C%2B%25EC%259D%2598%25EA%25B2%25AC%2B-%2BGoogle%2B%25EC%2584%25A4%25EB%25AC%25B8%25EC%25A7%2580%2B2017-03-18%2B08-29-00.jpg?Expires=1489879761&Signature=ABAW2w2X45SGbDjW6e-fnu6SIPAOok95VnI-HtgqJZeti6OO3yowXbMIt0gRRg3zmMe9GQPFOvFqRQRSZ0~zjNL0kN6BSOwEEn-rii~9ra-E2HihqeFi82JJvvnpNgl7r1Dmh35RqHzp4CpkL0JkgWAR1270sTurBWAWR1lFMLM-nGDgk43lcf~-UMqvWPMvmmYBnyEInMPswVCWMcx45u5UKJnEKbYiUfXj~E5Ks96zIoayooVgu7-4cfxvBZBqeSeNno5wO9BFal9A2pwvzDDqX9VxQAVqXJoaRmz5Pl3DtpffYxSIOPSx2KhmxcwmJC2e9hvxSsDIVycCmEmzZA__&Key-Pair-Id=APKAJHEJJBIZWFB73RSA)
+![](https://d1ro8r1rbfn3jf.cloudfront.net/ms_124679/oxndGtrJob3Fcynd9gAFisLmkVIZSk/4%252F1%2B%25EC%2598%25A4%25ED%259B%2584%2B3-7%25EC%258B%259C%2B%25EC%2588%2598%25EC%2597%2585%25EC%2597%2590%2B%25EB%258C%2580%25ED%2595%259C%2B%25EC%259D%2598%25EA%25B2%25AC%2B-%2BGoogle%2B%25EC%2584%25A4%25EB%25AC%25B8%25EC%25A7%2580%2B2017-03-18%2B08-29-00.jpg?Expires=1489879761&Signature=ABAW2w2X45SGbDjW6e-fnu6SIPAOok95VnI-HtgqJZeti6OO3yowXbMIt0gRRg3zmMe9GQPFOvFqRQRSZ0~zjNL0kN6BSOwEEn-rii~9ra-E2HihqeFi82JJvvnpNgl7r1Dmh35RqHzp4CpkL0JkgWAR1270sTurBWAWR1lFMLM-nGDgk43lcf~-UMqvWPMvmmYBnyEInMPswVCWMcx45u5UKJnEKbYiUfXj~E5Ks96zIoayooVgu7-4cfxvBZBqeSeNno5wO9BFal9A2pwvzDDqX9VxQAVqXJoaRmz5Pl3DtpffYxSIOPSx2KhmxcwmJC2e9hvxSsDIVycCmEmzZA__&Key-Pair-Id=APKAJHEJJBIZWFB73RSA) -->
 
 <!-- ---
 
