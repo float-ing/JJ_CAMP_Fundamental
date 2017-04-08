@@ -8,13 +8,71 @@
 var coverList = []; // Create Array
 
 // Add Item in Array
-coverList.push("001.EdSheeran-ShapeOfYou.jpg");
-coverList.push("002.TheChainsmokers&Halsey-Closer.jpg");
-coverList.push("003.Zayn&TaylorSwift-IDon'tWannaLiveForever(FiftyShadesDarker).jpg");
-coverList.push("004.KatyPerry&SkipMarley-ChainedToTheRhythm.jpg");
-coverList.push("005.Migos&LilUziVert-BadAndBoujee.jpg");
-coverList.push("006.TheChainsmokers-Paris.jpg");
-coverList.push("007.Rihanna-LoveOnTheBrain.jpg");
-coverList.push("008.BrunoMars-That'sWhatILike.jpg");
-coverList.push("009.BigSean-BounceBack.jpg");
-coverList.push("010.MachineGunKelly&CamilaCabello-BadThings.jpg");
+coverList.push({
+  src: "001.EdSheeran-ShapeOfYou.jpg",
+  alt: "Ed Sheeran - Shape Of You"
+});
+coverList.push({
+  src: "002.TheChainsmokers&Halsey-Closer.jpg",
+  alt: "The Chainsmokers & Halsey - Closer"
+});
+coverList.push({
+  src: "003.Zayn&TaylorSwift-IDon'tWannaLiveForever(FiftyShadesDarker).jpg",
+  alt: "Zayn & TaylorSwift - I Don't Wanna Live Forever (Fifty Shades Darker)"
+});
+coverList.push({
+  src: "004.KatyPerry&SkipMarley-ChainedToTheRhythm.jpg",
+  alt: "Katy Perry & Skip Marley - Chained To The Rhythm"
+});
+coverList.push({
+  src: "005.Migos&LilUziVert-BadAndBoujee.jpg",
+  alt: "Migos & Lil Uzi Vert - Bad And Boujee"
+});
+coverList.push({
+  src: "006.TheChainsmokers-Paris.jpg",
+  alt: "The Chainsmokers - Paris"
+});
+coverList.push({
+  src: "007.Rihanna-LoveOnTheBrain.jpg",
+  alt: "Rihanna - Love On The Brain"
+});
+coverList.push({
+  src: "008.BrunoMars-That'sWhatILike.jpg",
+  alt: "Bruno Mars - That's What I Like"
+});
+coverList.push({
+  src: "009.BigSean-BounceBack.jpg",
+  alt: "Big Sean - Bounce Back"
+});
+coverList.push({
+  src: "010.MachineGunKelly&CamilaCabello-BadThings.jpg",
+  alt: "Machine Gun Kelly & Camila Cabello - Bad Things"
+});
+
+
+// STEP 1
+// 문서 (HTML Document) 에서 제어할 대상 요소를 찾는다.
+// 찾고자 하는 대상의 식별자를 사용하여 대상 찾기를 하자.
+var coverList_el = document.querySelector('.music-coverlist');
+// console.log('coverList_el:', coverList_el);
+var inner_html_code = '';
+
+// STEP 2
+// 데이터 coverList => HTML 템플릿에 순환 처리 하여 화면에 렌더링 => 뷰(View) 구현
+for ( var i=0, l=coverList.length; i<l; ++i ) {
+  // console.log(i);
+  // console.log(coverList[i]); // 커버 이미지 경로
+  var src = 'media/cover/' + coverList[i].src;
+  // console.log(src);
+  // coverList_el // <ul> <- <li>
+  inner_html_code += '<li class="music-cover-item">';
+  inner_html_code +=     '<img class="music-cover is-rwd" src="'+ src +'" alt="Katy Perry & Skip Marley - Chained To The Rhythm">';
+  inner_html_code += '</li>';
+}
+
+coverList_el.innerHTML += inner_html_code;
+
+// HTML Code: Template
+// <li class="music-cover-item">
+//   <img class="music-cover is-rwd" src="" alt="">
+// </li>
