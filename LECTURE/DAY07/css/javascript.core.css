@@ -16,9 +16,16 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 100vh;
 }
 .music-player {
-  margin: 1rem;
+  overflow: hidden;
   width: 300px;
 }
-.music-coverlist {}
+.music-coverlist {
+  display: flex;
+  transform: translateX(0px);
+}
+.music-cover-item {
+  flex: 1 0 300px;
+}
