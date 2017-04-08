@@ -92,7 +92,7 @@ coverList_el.innerHTML += inner_html_code;
 var index = 0;
 console.log('index:', index);
 // 커버 이미지 리스트 요소의 이동하는 거리?
-var distance = 600;
+var distance = 400;
 
 // 3.1.1 버튼 컨트롤 찾기
 var controller = document.querySelector('.player-controller');
@@ -129,3 +129,25 @@ next_btn.onclick = function() {
   // console.log('next', coverList_el);
   coverList_el.style.transform = 'translateX(' + index * -1 * distance + 'px)';
 };
+
+// --------------------------------------------------------------------------------------------
+
+// STEP 4
+// 인디케이터 디자인(설계)
+
+// 4.1 인디케이터 컨테이너 요소 탐색, 변수에 참조
+var indicators = document.querySelector('.player-indicators');
+// console.log('indicators:', indicators);
+
+// 4.2 인디케이터 마크업을 coverList를 순환 처리하여 화면에 렌더링
+// <a href role="button" class="indicator" aria-label="Ed Sheeran - Shape Of You"></a>
+
+var k = coverList.length,
+    indicators_html = [];
+
+for( ; --k > -1; ) {
+  var label = coverList[k].alt;
+  indicators_html.push('<a href role="button" class="indicator" aria-label="'+label+'"></a>');
+}
+
+console.log(indicators_html.reverse().join(''));
