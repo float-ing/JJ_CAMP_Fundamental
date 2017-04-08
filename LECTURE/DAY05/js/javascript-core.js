@@ -181,27 +181,66 @@ var html = document.documentElement;
 // 해당 요소의 class 속성 값을 변경한다.
 html.setAttribute('class', 'js');
 
+// --------------------------
+// for 구문 사용 예시
+
+var cards = document.querySelectorAll('.card');
+var card;
+var card_toggle_button;
+var card_save_button;
+var card_edit_button;
+var card_delete_button;
+var card_content;
+
+for ( var i=0; i<cards.length; i++ ) {
+  card = cards[i];
+  card_toggle_button = card.querySelector('.card-header-icon');
+  card_save_button   = card.querySelector('.card-save-button');
+  card_edit_button   = card.querySelector('.card-edit-button');
+  card_delete_button = card.querySelector('.card-delete-button');
+  card_content       = card.querySelector('.card-content');
+
+  // 이벤트 리스너에 핸들러를 연결(Binding Event Handler)
+  card_toggle_button.onclick = toggleCardButton;
+  card_save_button.onclick   = saveCard;
+  card_edit_button.onclick   = editCard;
+  card_delete_button.onclick = deleteCard;
+}
+
+
+
+
+
+
+
+
+
+
+// --------------------------
+
+
+
 // TODO
 // Card Folding Example
 // 문서 Card 객체 참조
-var card               = document.querySelector('.card');
-var card_toggle_button = card.querySelector('.card-header-icon');
-var card_save_button   = card.querySelector('.card-save-button');
-var card_edit_button   = card.querySelector('.card-edit-button');
-var card_delete_button = card.querySelector('.card-delete-button');
-var card_content       = card.querySelector('.card-content');
-console.groupCollapsed('Card 컴포넌트 문서 객체 참조');
-console.log('card:', card);
-console.log('card_toggle_button:', card_toggle_button);
-console.log('card_delete_button:', card_delete_button);
-console.log('card_content:', card_content);
-console.groupEnd('Card 컴포넌트 문서 객체 참조');
+// var card               = document.querySelector('.card');
+// var card_toggle_button = card.querySelector('.card-header-icon');
+// var card_save_button   = card.querySelector('.card-save-button');
+// var card_edit_button   = card.querySelector('.card-edit-button');
+// var card_delete_button = card.querySelector('.card-delete-button');
+// var card_content       = card.querySelector('.card-content');
+// // console.groupCollapsed('Card 컴포넌트 문서 객체 참조');
+// // console.log('card:', card);
+// // console.log('card_toggle_button:', card_toggle_button);
+// // console.log('card_delete_button:', card_delete_button);
+// // console.log('card_content:', card_content);
+// // console.groupEnd('Card 컴포넌트 문서 객체 참조');
 
-// 이벤트 리스너에 핸들러를 연결(Binding Event Handler)
-card_toggle_button.onclick = toggleCardButton;
-card_save_button.onclick   = saveCard;
-card_edit_button.onclick   = editCard;
-card_delete_button.onclick = deleteCard;
+// // 이벤트 리스너에 핸들러를 연결(Binding Event Handler)
+// card_toggle_button.onclick = toggleCardButton;
+// card_save_button.onclick   = saveCard;
+// card_edit_button.onclick   = editCard;
+// card_delete_button.onclick = deleteCard;
 
 // 핸들러(함수) 정의
 function toggleCardButton(event) {

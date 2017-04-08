@@ -87,12 +87,46 @@ categories.push('technology');
 // var categories_len = categories.length; // 6
 // console.log('categories.length:', categories.length);
 
-var i = 0, source;
+var i = 0, source, size;
 while ( i < categories.length ) {
   // 0, 1, 2, 3, 4, 5
   // console.log(categories[i]);
-  source = 'http://source.unsplash.com/category/'+ categories[i] +'/400x400';
-  photo_gallery.innerHTML += '<img src="'+ source +'" alt="">';
+  // size 설정
+  // 200x200, 300x300, 400x400, 410x410
+  size = (i+10) * 20;
+  size = size + 'x' + size;
+  // console.log(size);
+  source = 'http://source.unsplash.com/category/'+ categories[i] +'/' + size;
+  photo_gallery.innerHTML += '<div class="img-container"><img src="'+ source +'" alt=""></div>';
   i++;
 }
 
+
+// ------------------------------------------------------------
+// do ~ while() 구문은
+// 조건이 참/거짓의 유무에 상관없이 반드시 1회는 실행되는 구문이다.
+// 자주 사용되지는 않으나, 필요한 상황이 되었을 때 이를 기억해내 사용하면 좋다.
+var k = 10;
+do {
+   // console.log(k); // 10
+   k++; // 11
+} while( k > 20 );
+
+
+
+// ------------------------------------------------------------
+// while() {}  ->  for() {}
+
+// 변수 반복자(i) 초기 값 0 설정
+var i = 0;
+
+// 조건 확인 (참이면 {} 수행)
+while ( i < categories.length ) {
+  console.log(i);
+  // 조건 확인 변수 반복자 값을 변화
+  i++;
+}
+
+for ( var i=0; i < categories.length; i++ ) {
+  console.log(i);
+}
