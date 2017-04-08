@@ -18,5 +18,3 @@ coverList.push("007.Rihanna-LoveOnTheBrain.jpg");
 coverList.push("008.BrunoMars-That'sWhatILike.jpg");
 coverList.push("009.BigSean-BounceBack.jpg");
 coverList.push("010.MachineGunKelly&CamilaCabello-BadThings.jpg");
-
-console.log('coverList:', coverList);
