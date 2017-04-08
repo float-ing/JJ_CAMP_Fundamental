@@ -81,3 +81,51 @@ for ( var i=0, l=coverList.length; i<l; ++i ) {
 }
 
 coverList_el.innerHTML += inner_html_code;
+
+
+// --------------------------------------------------------------------------------------------
+
+// STEP 3
+// 버튼 컨트롤 이벤트 리스너 설정 및 핸들러 연결
+// 3.1.0 상태 변수 설정
+// 현재 사용자에게 보여지는 커버의 인덱스 번호는?
+var index = 0;
+console.log('index:', index);
+// 커버 이미지 리스트 요소의 이동하는 거리?
+var distance = 600;
+
+// 3.1.1 버튼 컨트롤 찾기
+var controller = document.querySelector('.player-controller');
+var prev_btn   = controller.querySelector('.is-prev');
+var next_btn   = controller.querySelector('.is-next');
+// console.log('prev_btn:', prev_btn);
+// console.log('next_btn:', next_btn);
+
+// 3.2 버튼 컨트롤에 이벤트 리스너(속성) 설정
+// 3.3 버튼 컨트롤 이벤트 리스너에 핸들러(함수) 연결
+prev_btn.onclick = function() {
+  // index = index - 1;
+  index--;
+  console.log('index:', index);
+  console.log('index < 0:', index < 0);
+    if ( index < 0 ) {
+      // 함수 종료
+      // return;
+      index = coverList.length - 1;
+    }
+  // console.log('prev', coverList_el);
+  coverList_el.style.transform = 'translateX(' + index * -1 * distance + 'px)';
+};
+next_btn.onclick = function() {
+  // index = index + 1;
+  index++; // 10
+  console.log('index:', index);
+  console.log('index === coverList.length:', index === coverList.length);
+  if ( index === coverList.length ) {
+    // 함수 종료
+    // return;
+    index = 0;
+  }
+  // console.log('next', coverList_el);
+  coverList_el.style.transform = 'translateX(' + index * -1 * distance + 'px)';
+};

@@ -26,14 +26,15 @@ body {
 .music-player {
   position: relative;
   overflow: hidden;
-  width: 300px;
+  width: 600px;
 }
 .music-coverlist {
   display: flex;
   transform: translateX(0px);
+  transition: all 0.4s cubic-bezier(0.92, 0, 0.49, 0.47);
 }
 .music-cover-item {
-  flex: 1 0 300px;
+  flex: 1 0 600px;
 }
 
 .player-controller {
@@ -64,6 +65,9 @@ body {
 
 .player-controller .button:focus {
   box-shadow: 0 0 0px 3px #474cc5;
+}
+.player-controller .button:active {
+  box-shadow: none;
 }
 
 .player-controller .is-prev {
